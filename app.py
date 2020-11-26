@@ -12,6 +12,7 @@ import Trade_2020
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 # allows callback that induce further callbacks
+server = app.server
 app.config.suppress_callback_exceptions = True
 
 layout_dict = {}
