@@ -1,2 +1,3 @@
-web: gunicorn app:server --log-file=-
+web: gunicorn app.wsgi
+app:server --log-file=-
 serve=app.server
