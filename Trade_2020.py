@@ -19,11 +19,10 @@ from colour import Color
 
 # In[3]:
 
-url1="https://github.com/astennett-research/trade11/blob/master/Data/Exports%202013%20to%202020.xlsx"
-df=pd.read_excel(url1,sep=",")
-df.head()
-df1=df.round(2)
 
+df=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\Exports 2013 to 2020.xlsx")
+df1=df.round(2)
+df1
 
 
 # In[4]:
@@ -53,9 +52,8 @@ p1
 
 # In[5]:
 
-url2="https://github.com/astennett-research/trade11/blob/master/Data/Imports%202013%20to%202020.xlsx"
-df2=pd.read_excel(url2,sep=",")
-df2.head()
+
+df2=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\Imports 2013 to 2020.xlsx")
 rdf2=df2.round(2)
 
 
@@ -85,9 +83,8 @@ p2
 
 # In[7]:
 
-url3="https://github.com/astennett-research/trade11/blob/master/Data/Sector%20Exports%202013%20to%202020.xlsx"
-df3=pd.read_excel(url2,sep=",")
-df3.head()
+
+df3=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\Sector Exports 2013 to 2020.xlsx")
 rdf3=df3.round(2)
 
 
@@ -112,9 +109,8 @@ p3.update_layout(font=dict(family='Helvetica'))
 
 # In[10]:
 
-url4="https://github.com/astennett-research/trade11/blob/master/Data/Sector%20Imports%202013%20to%202020.xlsx"
-df4=pd.read_excel(url4,sep=",")
-df4.head()
+
+df4=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\Sector Imports 2013 to 2020.xlsx")
 rdf4=df4.round(2)
 tidy_df4=pd.melt(rdf4,['Good'], var_name="Date", value_name="Import £m")
 
@@ -134,9 +130,8 @@ p4.update_layout(font=dict(family='Helvetica'))
 
 # In[12]:
 
-url5="https://github.com/astennett-research/trade11/blob/master/Data/EU%20ROW%20Exports%202013%20to%202020.xlsx"
-df5=pd.read_excel(url5,sep=",")
-df5.head()
+
+df5=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\EU ROW Exports 2013 to 2020.xlsx")
 rdf5=df5.round(2)
 tidy_df5=pd.melt(rdf5,['EU / NON EU'], var_name="Date", value_name="Export £m")
 
@@ -155,9 +150,8 @@ p5.update_layout(font=dict(family='Helvetica'))
 
 # In[14]:
 
-url6="https://github.com/astennett-research/trade11/blob/master/Data/Sector%20Imports%202013%20to%202020.xlsx"
-df6=pd.read_excel(url6,sep=",")
-df6.head()
+
+df6=pd.read_excel(r"c:\Users\Sten\PycharmProjects\trade2\Data\EU ROW Imports 2013 to 2020.xlsx")
 rdf6=df6.round(2)
 tidy_df6=pd.melt(rdf6,['EU / NON EU'], var_name="Date", value_name="Import £m")
 p6=px.line(tidy_df6, x="Date", y="Import £m", color="EU / NON EU",
